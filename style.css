@@ -1,11 +1,9 @@
 :root{
-    --fondo : #9E9E9E;
+    --fondo : #e1e1e1;
     --letras : #1F2052;
     --fondo-nav : #050505;
     
 }
-
-
 
 *{
     padding: 0px 0px;
@@ -14,18 +12,19 @@
 
 body{
     background-color: var(--fondo);
+    display: flex;
+    
 }
 
 .nav_header{
-    border: solid 1px blue;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
-    height: 70px;
+    height: 80px;
     position: fixed;
     background-color: var(--fondo-nav);
-    
+
 }
 
 .menu{
@@ -45,4 +44,60 @@ body{
     border: 1px solid white;
     padding: 7px 10px;
     border-radius: 10px
+}
+
+.img_nav{
+    position: absolute;
+    border: 1px solid white;
+    width: 80px;
+    height: 60px;
+    left: 16px;
+    top: 9px;
+}
+
+.container {
+    /* border: 1px solid yellow; */
+    height: 50px;
+    margin-top: 87px;
+    width: 100%;
+    min-height: 450px;
+    display: block;
+        
+}
+
+.welcome{
+    /* border: 1px solid white; */
+    padding: 25px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.texto_introductivo{
+    /* border: 1px solid purple; */
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentacion{
+    width: 100%;
+    border-radius: 50px;
+    background-color: rgb(190, 192, 193);
+    text-align: center;
+    padding: 10px 10px;
+    height: 150px;
+    font-family: cursive;
+    font-size: 16px;
+    margin: 10px 50px;
+}
+
+.img_presentacion{
+    width: 50%;
+    border-radius: 30px;
+    
 }
