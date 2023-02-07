@@ -24,13 +24,13 @@ body{
     height: 80px;
     position: fixed;
     background-color: var(--fondo-nav);
-
+    transition: height 0.8s linear 1ms;
 }
 
 .menu{
     display: flex;
     gap: 10px;
-    margin-right: 10px;
+    margin-right: 50px;
     position: absolute;
     bottom: 10px;
 }
@@ -38,6 +38,7 @@ body{
 .menu > a {
     text-decoration: none; 
     color: white;
+    text-align: center;
 }
 
 .menu > a > div{
@@ -53,6 +54,7 @@ body{
     height: 60px;
     left: 16px;
     top: 9px;
+    border-radius: 15px;
 }
 
 .container {
@@ -62,6 +64,7 @@ body{
     width: 100%;
     min-height: 450px;
     display: block;
+    transition: margin-top 0.8s linear 1ms;
         
 }
 
@@ -73,6 +76,7 @@ body{
     align-items: center;
     font-size: 2rem;
     width: 100%;
+    z-index: -1;
 }
 
 .texto_introductivo{
@@ -102,28 +106,69 @@ body{
     border-radius: 50%;    
 }
 
+p{
+    margin: 10px 10px;
+    padding: 5px 10px;
+}
+
 @media screen and (max-width: 768px) {
+   
     body {
-      background-color: lightgreen;
+        background-color: var(--fondo);
     }
     .menu{
         display: grid;
         justify-content: center;
         align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 38px;
+        gap: 10px;
     }
     .nav_header {
         display: flex;
         justify-content: center;
-        height: 192px;
+        height: 109px;
+        z-index: 1;
 
     }
 
     .container{
         height: 50px;
-        margin-top: 205px;
+        margin-top: 120px;
         width: 100%;
         min-height: 450px;
         display: block;
     }
 
+    .texto_introductivo{
+        width: 100%;
+        min-height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 10px;
+    }
+
+    p{
+        margin: 10px 10px;
+        padding: 5px 10px;
+    }
+
+    .presentacion{
+        width: 80%;
+        border-radius: 50px;
+        background-color: rgb(190, 192, 193);
+        text-align: center;
+        padding: 10px 10px;
+        height: 150px;
+        font-family: cursive;
+        font-size: 16px;
+        margin: 10px 50px;
+        height: auto;
+    }
+
+    .img_nav{
+        visibility: hidden;
+    }
   }
