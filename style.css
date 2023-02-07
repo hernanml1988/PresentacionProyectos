@@ -94,10 +94,36 @@ body{
     font-family: cursive;
     font-size: 16px;
     margin: 10px 50px;
+    height: auto;
 }
 
 .img_presentacion{
-    width: 50%;
-    border-radius: 30px;
-    
+    width: 90%;
+    border-radius: 50%;    
 }
+
+@media screen and (max-width: 768px) {
+    body {
+      background-color: lightgreen;
+    }
+    .menu{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav_header {
+        display: flex;
+        justify-content: center;
+        height: 192px;
+
+    }
+
+    .container{
+        height: 50px;
+        margin-top: 205px;
+        width: 100%;
+        min-height: 450px;
+        display: block;
+    }
+
+  }
