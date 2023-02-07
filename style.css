@@ -1,0 +1,48 @@
+:root{
+    --fondo : #9E9E9E;
+    --letras : #1F2052;
+    --fondo-nav : #050505;
+    
+}
+
+
+
+*{
+    padding: 0px 0px;
+    margin: 0px 0px;    
+}
+
+body{
+    background-color: var(--fondo);
+}
+
+.nav_header{
+    border: solid 1px blue;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    height: 70px;
+    position: fixed;
+    background-color: var(--fondo-nav);
+    
+}
+
+.menu{
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.menu > a {
+    text-decoration: none; 
+    color: white;
+}
+
+.menu > a > div{
+    border: 1px solid white;
+    padding: 7px 10px;
+    border-radius: 10px
+}
