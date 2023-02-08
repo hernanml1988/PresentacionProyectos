@@ -157,7 +157,18 @@ form{
     margin: auto;
 }
 
-
+.flecha_menu{
+    width: 50px;
+    position: absolute;
+    background-color: black;
+    color: white;
+    margin-top: 12px;
+    border: 2px solid white;
+    padding: 5px 5px;
+    border-radius: 10px;
+    text-align: center;
+    visibility: hidden;
+}
 
 @media screen and (max-width: 768px) {
    
@@ -218,5 +229,79 @@ form{
 
     .img_nav{
         visibility: hidden;
+    }
+
+    @media screen and (max-width: 370px){
+        .nav_header {
+            display: flex;
+            justify-content: center;
+            height: 56px;
+            z-index: 0;
+        }
+        .nav_header_responsive {
+            display: flex;
+            justify-content: center;
+            height: 180px;
+            z-index: 0;
+            width: 100%;
+            flex-wrap: wrap;
+            position: fixed;
+            background-color: var(--fondo-nav);
+            transition: height 0.2s linear 1ms;
+        }
+        .menu{
+            visibility: hidden;
+
+            /* display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            margin-left: 38px;
+            gap: 10px; */
+        }
+
+        .menu_responsive{
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(1, 1fr);
+            margin-top: 54px;
+            padding: 5px 5px;
+            gap: 10px;
+            margin-bottom: 10px ;
+        }
+        .menu_responsive > a {
+            text-decoration: none;
+            color: white;
+            padding: 1px 1px;
+        }
+        .container{
+            height: 50px;
+            margin-top: 60px;
+            width: 100%;
+            min-height: 450px;
+            display: block;
+        }
+
+        .container_responsive{
+            height: 50px;
+            margin-top: 180px;
+            width: 100%;
+            min-height: 450px;
+            display: block;
+        }
+
+        .flecha_menu{
+            width: 50px;
+            position: absolute;
+            background-color: black;
+            color: white;
+            margin-top: 12px;
+            border: 2px solid white;
+            padding: 5px 5px;
+            border-radius: 10px;
+            text-align: center;
+            visibility: visible;
+        }
+
     }
   }
