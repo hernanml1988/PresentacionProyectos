@@ -38,9 +38,6 @@
           <a href="proyecto.html">
             <div class="sub_menu">Galeria Proyectos</div>
           </a>
-          <a href="imagenes.html">
-            <div class="sub_menu">Galeria Imagenes</div>
-          </a>
           <a href="contacto.html">
             <div class="sub_menu">Contacto</div>
           </a>
@@ -49,38 +46,77 @@
     </div>
     <div class="container">
       <div class="contacto_container">
-        <form action="" method="post">
+        <form id="form">
           <h1>Contacto</h1>
 
           <input
             type="text"
             autocomplete="off"
-            name="text"
+            name="name"
+            id="name"
             class="input"
             placeholder="Nombre"
+            required
           />
           <input
             type="text"
             autocomplete="off"
-            name="text"
+            name="email"
+            id="email"
             class="input"
             placeholder="Email"
+            required
           />
           <textarea
             type="text"
             autocomplete="off"
-            name="text"
+            name="mensaje"
+            id="mensaje"
             class="input"
             placeholder="Mensaje"
             cols="20"
             rows="10"
+            required
           ></textarea>
 
-          <button class="btn_enviar">Enviar</button>
+          <input type="submit" id="button" value="Enviar Mensaje" />
         </form>
+        <script
+          type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+        ></script>
+
+        <script type="text/javascript">
+          emailjs.init("09tYbdGEjmSSSx2Nd");
+        </script>
       </div>
     </div>
 
     <script src="app.js"></script>
+    <script>
+      const btn = document.getElementById("button");
+
+      document
+        .getElementById("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          btn.value = "Enviando...";
+
+          const serviceID = "default_service";
+          const templateID = "template_zp7nl5p";
+
+          emailjs.sendForm(serviceID, templateID, this).then(
+            () => {
+              btn.value = "Enviar Mensaje";
+              alert("Mensaje Enviado Correctamente");
+            },
+            (err) => {
+              btn.value = "Enviar Mensaje";
+              alert(JSON.stringify(err));
+            }
+          );
+        });
+    </script>
   </body>
 </html>

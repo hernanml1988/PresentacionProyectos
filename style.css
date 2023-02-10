@@ -231,18 +231,18 @@ form{
         visibility: hidden;
     }
 
-    @media screen and (max-width: 370px){
+    @media screen and (max-width: 380px){
         .nav_header {
             display: flex;
             justify-content: center;
             height: 56px;
-            z-index: 0;
+            z-index: 1;
         }
         .nav_header_responsive {
             display: flex;
             justify-content: center;
             height: 180px;
-            z-index: 0;
+            z-index: 1;
             width: 100%;
             flex-wrap: wrap;
             position: fixed;
@@ -302,6 +302,31 @@ form{
             border-radius: 10px;
             text-align: center;
             visibility: visible;
+            z-index: 1;
+        }
+
+        .texto_introductivo{
+            width: 100%;
+            min-height: auto;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 10px;
+        }
+        
+        .presentacion {
+            width: 80%;
+            border-radius: 50px;
+            background-color: rgb(190, 192, 193);
+            text-align: center;
+            padding: 10px 10px;
+            height: 150px;
+            font-family: cursive;
+            font-size: 16px;
+            margin: 17px 50px;
+            height: auto;
+            margin-left: 18px;
         }
 
     }
