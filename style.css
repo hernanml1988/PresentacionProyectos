@@ -1,5 +1,5 @@
 :root{
-    --fondo : #e1e1e1;
+    --fondo : #white;
     --letras : #1F2052;
     --fondo-nav : #050505;
     
@@ -170,23 +170,37 @@ form{
     visibility: hidden;
 }
 
+#button{
+    background-color: black;
+    color: white;
+    padding: 5px 5px;
+    outline: none;
+    border-radius: 15px;
+}
+
+#button:active{
+    transform: scale(0.9);
+}
+
 @media screen and (max-width: 768px) {
    
     body {
         background-color: var(--fondo);
     }
     .menu{
-        display: grid;
+        display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         align-items: center;
         grid-template-columns: repeat(2, 1fr);
         margin-left: 38px;
         gap: 10px;
+        margin-bottom: 15px;
     }
     .nav_header {
         display: flex;
         justify-content: center;
-        height: 109px;
+        height: 90px;
         z-index: 1;
 
     }
@@ -228,14 +242,14 @@ form{
     }
 
     .img_nav{
-        visibility: hidden;
+        visibility: visible;
     }
 
     @media screen and (max-width: 380px){
         .nav_header {
             display: flex;
             justify-content: center;
-            height: 56px;
+            height: 81px;
             z-index: 1;
         }
         .nav_header_responsive {
@@ -250,8 +264,8 @@ form{
             transition: height 0.2s linear 1ms;
         }
         .menu{
+            
             visibility: hidden;
-
             /* display: grid;
             justify-content: center;
             align-items: center;
@@ -276,7 +290,7 @@ form{
         }
         .container{
             height: 50px;
-            margin-top: 60px;
+            margin-top: 80px;
             width: 100%;
             min-height: 450px;
             display: block;
@@ -296,7 +310,7 @@ form{
             position: absolute;
             background-color: black;
             color: white;
-            margin-top: 12px;
+            margin-top: 25px;
             border: 2px solid white;
             padding: 5px 5px;
             border-radius: 10px;
@@ -328,6 +342,8 @@ form{
             height: auto;
             margin-left: 18px;
         }
+
+        
 
     }
   }
