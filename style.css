@@ -1,19 +1,19 @@
 :root{
-    --fondo : #white;
+    --fondo : white;
     --letras : #1F2052;
     --fondo-nav : #050505;
-    
+
 }
 
 *{
     padding: 0px 0px;
-    margin: 0px 0px;    
+    margin: 0px 0px;
 }
 
 body{
     background-color: var(--fondo);
     display: flex;
-    
+
 }
 
 .nav_header{
@@ -36,7 +36,7 @@ body{
 }
 
 .menu > a {
-    text-decoration: none; 
+    text-decoration: none;
     color: white;
     text-align: center;
 }
@@ -65,7 +65,7 @@ body{
     min-height: 450px;
     display: block;
     transition: margin-top 0.8s linear 1ms;
-        
+
 }
 
 .welcome{
@@ -103,7 +103,7 @@ body{
 
 .img_presentacion{
     width: 90%;
-    border-radius: 50%;    
+    border-radius: 50%;
 }
 
 p{
@@ -129,7 +129,7 @@ form{
     align-items: center;
     justify-content: center;
     grid-template-columns: repeat(1, 50%);
-    
+
 }
 
 .input {
@@ -141,7 +141,7 @@ form{
     box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
     transition: 300ms ease-in-out;
   }
-  
+
   .input:focus {
     background-color: white;
     transform: scale(1.05);
@@ -183,7 +183,7 @@ form{
 }
 
 @media screen and (max-width: 768px) {
-   
+
     body {
         background-color: var(--fondo);
     }
@@ -264,7 +264,7 @@ form{
             transition: height 0.2s linear 1ms;
         }
         .menu{
-            
+
             visibility: hidden;
             /* display: grid;
             justify-content: center;
@@ -294,7 +294,7 @@ form{
             width: 100%;
             min-height: 450px;
             display: block;
-            
+
         }
 
         .container_responsive{
@@ -328,7 +328,7 @@ form{
             align-items: center;
             margin: 10px 10px;
         }
-        
+
         .presentacion {
             width: 80%;
             border-radius: 50px;
@@ -343,7 +343,111 @@ form{
             margin-left: 18px;
         }
 
-        
+
 
     }
+  }
+
+  
+
+
+  /*Estilos vista proyectos*/
+
+  .titulo_proyectos{
+    color: white;
+    margin: 0px 10px;
+  }
+  .container_gallery{
+    border: 1px solid blue;
+    background: linear-gradient(50deg, grey, black, grey);
+    min-width: 250px;
+    max-width: 950px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 25px;
+    padding: 25px 25px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .container_proyectos{
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    margin: 20px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid yellow;
+    border-radius: 25px;
+    padding: 25px 25px;
+  }
+
+  .container_proyectos> a{
+    text-decoration: none;
+  }
+
+  .card{
+    width: 219px;
+    height: 242px;
+    border: 2px solid rgb(97, 95, 95);
+    box-shadow: 0px 0px 2px 2px #544949;
+    border-radius: 5px;
+    background: linear-gradient(25deg, #150a0a, #cdc5c5, black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+  }
+
+  .img_card{
+    width: 150px;
+    height: 120px;
+    margin-top: 8px;
+  }
+
+  .img_card> img{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .titulo_card{
+    text-align: center;
+    margin: 0px 5px;
+    border: 1px solid grey;
+    background: #050505;
+  }
+
+  .descripcion_card{
+    font-size: 13px;
+    text-align: center;
+  }
+
+
+  /*Estilos general de la vista de los proyectos*/
+
+  .primera_capa{
+    display: flex; 
+    justify-content: center
+  }
+
+  .contenido{
+    border: 1px solid grey;
+    min-width: 250px;
+    max-width: 800px;
+    min-height: 400px;
+    
+  }
+
+
+  /*estilos proyecto php mysql*/
+
+  .titulo_php_mysql{
+    
   }
